@@ -226,6 +226,25 @@ footer a{color:#0073b6;text-decoration:none;margin:0 .4rem;}
   .problems-grid,.os-grid{grid-template-columns:1fr;}
   .stats-inner{grid-template-columns:1fr 1fr;}
 }
+
+/* ── ANYDESK ── */
+.anydesk-block{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-bottom:5rem;background:#f8f9ff;border-radius:20px;padding:3rem;border:1.5px solid #eef0f8;}
+.ad-logo{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;}
+.ad-name{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:#1a1a2e;}
+.ad-sub{font-size:.8rem;color:#777;font-weight:500;}
+.ad-desc{font-size:.9rem;color:#444;line-height:1.8;margin-bottom:1.5rem;}
+.ad-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;}
+.ad-stat{text-align:center;background:#fff;border-radius:10px;padding:.75rem .5rem;border:1.5px solid #eef0f8;}
+.ad-stat strong{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:800;color:#1a1a2e;display:block;}
+.ad-stat span{font-size:.7rem;color:#777;}
+.ad-feat-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:#1a1a2e;margin-bottom:1rem;}
+.ad-feat{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1rem;}
+.ad-feat span{font-size:1.3rem;flex-shrink:0;margin-top:.1rem;}
+.ad-feat strong{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;color:#1a1a2e;display:block;margin-bottom:.2rem;}
+.ad-feat p{font-size:.82rem;color:#555;line-height:1.55;margin:0;}
+.btn-anydesk{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.25rem;background:#e8382e;color:#fff;padding:.8rem 1.75rem;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .2s;}
+.btn-anydesk:hover{background:#c42d24;transform:translateY(-2px);}
+@media(max-width:900px){.anydesk-block{grid-template-columns:1fr;}.ad-stats{grid-template-columns:repeat(2,1fr);}}
 </style>
 </head>
 <body>
@@ -358,7 +377,7 @@ footer a{color:#0073b6;text-decoration:none;margin:0 .4rem;}
     <div class="how-card">
       <div class="how-num">2</div>
       <div class="how-title">Scarichi il software</div>
-      <div class="how-desc">Ti inviamo un link per scaricare il software di connessione sicura. L'installazione richiede meno di 2 minuti.</div>
+      <div class="how-desc">Ti inviamo un link per scaricare <strong>AnyDesk</strong>, il software professionale di controllo remoto. L'installazione richiede meno di 2 minuti.</div>
     </div>
     <div class="how-card">
       <div class="how-num">3</div>
@@ -368,7 +387,42 @@ footer a{color:#0073b6;text-decoration:none;margin:0 .4rem;}
     <div class="how-card">
       <div class="how-num">4</div>
       <div class="how-title">Problema risolto</div>
-      <div class="how-desc">A fine sessione il software si chiude automaticamente. Non rimane nessun accesso permanente al tuo dispositivo.</div>
+      <div class="how-desc">A fine sessione AnyDesk si chiude e il codice cambia automaticamente. Non rimane nessun accesso permanente al tuo dispositivo.</div>
+    </div>
+  </div>
+
+
+  <!-- ANYDESK -->
+  <div class="sec-hdr">
+    <span class="tag">Software ufficiale</span>
+    <h2>Utilizziamo AnyDesk per il controllo remoto</h2>
+    <p>AnyDesk è il software di assistenza remota professionale scelto da oltre 170.000 aziende nel mondo. Leggero, veloce e sicuro.</p>
+  </div>
+  <div class="anydesk-block">
+    <div class="ad-left">
+      <div class="ad-logo">
+        <span style="font-size:3rem;">🖥️</span>
+        <div>
+          <div class="ad-name">AnyDesk</div>
+          <div class="ad-sub">Remote Desktop Software</div>
+        </div>
+      </div>
+      <p class="ad-desc">AnyDesk è sviluppato in Germania e certificato dalla BSI (Bundesamt für Sicherheit in der Informationstechnik). Utilizza la tecnologia DeskRT brevettata per garantire una connessione fluida anche con connessioni lente. È lo standard di riferimento per l'assistenza remota professionale in tutto il mondo.</p>
+      <div class="ad-stats">
+        <div class="ad-stat"><strong>170.000+</strong><span>aziende clienti</span></div>
+        <div class="ad-stat"><strong>AES-256</strong><span>crittografia</span></div>
+        <div class="ad-stat"><strong>TLS 1.2</strong><span>protocollo sicuro</span></div>
+        <div class="ad-stat"><strong>BSI</strong><span>certificato</span></div>
+      </div>
+    </div>
+    <div class="ad-right">
+      <div class="ad-feat-title">Perché AnyDesk è sicuro</div>
+      <div class="ad-feat"><span>🔒</span><div><strong>Crittografia AES-256 + TLS 1.2</strong><p>Standard bancario, ogni sessione è completamente cifrata end-to-end.</p></div></div>
+      <div class="ad-feat"><span>👁️</span><div><strong>Visione totale in tempo reale</strong><p>Vedi ogni click e azione del tecnico. Niente è nascosto.</p></div></div>
+      <div class="ad-feat"><span>🔢</span><div><strong>Codice monouso a 9 cifre</strong><p>Il codice cambia ad ogni sessione. Impossibile riconnettersi senza il tuo consenso.</p></div></div>
+      <div class="ad-feat"><span>⛔</span><div><strong>Zero accesso permanente</strong><p>Chiusa la sessione, AnyDesk si disconnette automaticamente e definitivamente.</p></div></div>
+      <div class="ad-feat"><span>✋</span><div><strong>Controllo totale dell'utente</strong><p>Puoi interrompere la connessione in qualsiasi momento con un click.</p></div></div>
+      <a href="https://anydesk.com/it/downloads" target="_blank" rel="noopener" class="btn-anydesk">⬇️ Scarica AnyDesk gratuitamente</a>
     </div>
   </div>
 
@@ -424,7 +478,7 @@ footer a{color:#0073b6;text-decoration:none;margin:0 .4rem;}
     <div class="sec-icon">🔐</div>
     <div class="sec-text">
       <h3>La tua privacy è al sicuro — connessione 100% cifrata</h3>
-      <p>Il software di assistenza remota utilizza crittografia AES-256 end-to-end, lo stesso standard usato dalle banche. Vedi in tempo reale ogni operazione eseguita dal tecnico. La sessione si chiude non appena l'intervento è completato — non rimane nessun accesso permanente al tuo dispositivo.</p>
+      <p><strong>AnyDesk</strong> utilizza crittografia AES-256 end-to-end con TLS 1.2, lo stesso standard usato dalle banche. Certificato dalla BSI (Agenzia federale tedesca per la sicurezza informatica). Vedi in tempo reale ogni operazione eseguita dal tecnico. La sessione si chiude non appena l'intervento è completato — non rimane nessun accesso permanente al tuo dispositivo.</p>
       <div class="sec-badges">
         <span class="sec-badge">🔒 AES-256 crittografia</span>
         <span class="sec-badge">👁️ Visione totale in tempo reale</span>
@@ -442,15 +496,15 @@ footer a{color:#0073b6;text-decoration:none;margin:0 .4rem;}
   <div class="faq-section">
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Come funziona concretamente l'assistenza remota? <span class="faq-icon">+</span></div>
-      <div class="faq-a">Ci chiami o scrivi su WhatsApp. Ti inviamo un link da cui scaricare un piccolo programma (tipo AnyDesk o TeamViewer). Lo apri, ci comunichi il codice che appare sullo schermo e in pochi secondi il tecnico è connesso al tuo PC. Vedi tutto in tempo reale e puoi interrompere quando vuoi.</div>
+      <div class="faq-a">Ci chiami o scrivi su WhatsApp. Ti inviamo un link per scaricare <strong>AnyDesk</strong>, il software professionale di controllo remoto usato da milioni di aziende nel mondo. Lo apri, ci comunichi il codice a 9 cifre che appare sullo schermo e in pochi secondi il tecnico è connesso al tuo PC. Vedi tutto in tempo reale e puoi interrompere quando vuoi.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">È sicuro far accedere qualcuno al mio computer? <span class="faq-icon">+</span></div>
-      <div class="faq-a">Assolutamente sì. La connessione è cifrata con standard AES-256 (uguale alle banche). Vedi ogni azione del tecnico in tempo reale. Al termine il software si chiude e non rimane nessun accesso. Puoi interrompere la sessione in qualsiasi momento premendo un tasto.</div>
+      <div class="faq-a">Assolutamente sì. Utilizziamo <strong>AnyDesk</strong>, certificato dalla BSI (Agenzia federale tedesca per la sicurezza informatica). La connessione è cifrata AES-256 con TLS 1.2. Vedi ogni azione in tempo reale. Al termine il codice cambia automaticamente — nessun accesso permanente. Puoi interrompere in qualsiasi momento.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Come si paga l'assistenza remota? <span class="faq-icon">+</span></div>
-      <div class="faq-a">Il pagamento avviene prima dell'intervento tramite <strong>PayPal</strong> (SimoneTerragni@proton.me) o tramite <strong>WhatsApp</strong> concordando le modalità. Scegliamo insieme il pacchetto più adatto al tuo problema prima di procedere.</div>
+      <div class="faq-a">Il pagamento avviene prima dell'intervento tramite <strong>PayPal</strong> (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5003393d3f3e350435222231373e391020223f243f3e7e3d35">[email&#160;protected]</a>) o tramite <strong>WhatsApp</strong> concordando le modalità. Scegliamo insieme il pacchetto più adatto al tuo problema prima di procedere.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">E se il problema non viene risolto entro il tempo del pacchetto? <span class="faq-icon">+</span></div>
@@ -486,7 +540,7 @@ footer a{color:#0073b6;text-decoration:none;margin:0 .4rem;}
     <span class="dmca">PROTECTED</span><span class="dmca dmca2">DMCA</span>
   </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleFaq(el){
   var item=el.parentElement;
   var isOpen=item.classList.contains('open');
@@ -499,9 +553,4 @@ function toggleFaq(el){
   var ham=document.getElementById('hamburger');
   var mob=document.getElementById('mobileMenu');
   if(!ham||!mob)return;
-  ham.addEventListener('click',function(){ham.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('open')?'hidden':'';});
-  mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ham.classList.remove('open');mob.classList.remove('open');document.body.style.overflow='';});});
-})();
-</script>
-</body>
-</html>
+  ham.addEventListener('click',function(){ham.classList.toggle('open');mob.classList.toggle('open');document.body.style.overflow=mob.classList.contains('op
