@@ -165,22 +165,24 @@ footer a:hover{text-decoration:underline;}
     </div>
     <div class="form-card">
       <h3>RICHIESTA INFO</h3>
-      <form>
-        <div class="row2">
-          <input type="text" placeholder="Nome *">
-          <input type="text" placeholder="Cognome">
-        </div>
-        <div class="row2">
-          <input type="email" placeholder="E-mail *">
-          <input type="tel" placeholder="Telefono *">
-        </div>
-        <textarea placeholder="Scrivi qui il tuo messaggio"></textarea>
-        <div class="pr-row">
-          <input type="checkbox">
-          <span>Acconsento al trattamento dei miei dati personali da parte del proprietario di questo sito Web.</span>
-        </div>
-        <button class="btn-send" type="submit">Invia</button>
-      </form>
+      <form action="https://formspree.io/f/xdapwpwq" method="POST" onsubmit="handleForm(event,this)">
+<input type="hidden" name="_subject" value="Richiesta info - Doctor Computer">
+<input type="hidden" name="_replyto" value="">
+<div class="row2">
+  <div class="field"><label>Nome *</label><input type="text" name="nome" placeholder="Nome *" required></div>
+  <div class="field"><label>Cognome</label><input type="text" name="cognome" placeholder="Cognome"></div>
+</div>
+<div class="row2">
+  <div class="field"><label>E-mail *</label><input type="email" name="email" placeholder="E-mail *" required></div>
+  <div class="field"><label>Telefono *</label><input type="tel" name="telefono" placeholder="Telefono *" required></div>
+</div>
+<div class="field"><label>Scrivi qui il tuo messaggio</label><textarea name="messaggio" placeholder="Scrivi qui il tuo messaggio" required></textarea></div>
+<div class="pr-row">
+  <input type="checkbox" required>
+  <span>Acconsento al trattamento dei miei dati personali ai sensi del GDPR 2016/679. <a href="privacy-cookie-policy.html" target="_blank">Leggi la Privacy Policy</a>.</span>
+</div>
+<button type="submit" class="btn-send">Invia</button>
+</form>
     </div>
   </div>
 </section>

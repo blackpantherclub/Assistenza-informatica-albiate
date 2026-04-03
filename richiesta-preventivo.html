@@ -130,49 +130,25 @@ footer a{color:#0073b6;text-decoration:none;margin:0 .4rem;}
     <!-- FORM -->
     <div class="form-block">
       <h2>Contattaci</h2>
-      <form onsubmit="return false;">
-        <div class="row2">
-          <div class="field">
-            <label>Nome <span>*</span></label>
-            <input type="text" placeholder="Il tuo nome">
-          </div>
-          <div class="field">
-            <label>Cognome</label>
-            <input type="text" placeholder="Il tuo cognome">
-          </div>
-        </div>
-        <div class="row2">
-          <div class="field">
-            <label>E-mail <span>*</span></label>
-            <input type="email" placeholder="email@esempio.it">
-          </div>
-          <div class="field">
-            <label>Telefono <span>*</span></label>
-            <input type="tel" placeholder="+39 ...">
-          </div>
-        </div>
-        <div class="field">
-          <label>Budget stimato</label>
-          <select>
-            <option value="" disabled selected>Seleziona una fascia di prezzo</option>
-            <option>Meno di 100€</option>
-            <option>100 - 300€</option>
-            <option>300 - 500€</option>
-            <option>500 - 1000€</option>
-            <option>Oltre 1000€</option>
-            <option>Non so ancora</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Scrivi qui il tuo messaggio</label>
-          <textarea placeholder="Descrivi il problema o il servizio di cui hai bisogno..."></textarea>
-        </div>
-        <div class="pr-row">
-          <input type="checkbox">
-          <span>Acconsento al trattamento dei miei dati personali da parte del proprietario di questo sito Web.</span>
-        </div>
-        <button class="btn-send" type="submit">Invia richiesta →</button>
-      </form>
+      <form action="https://formspree.io/f/xdapwpwq" method="POST" onsubmit="handleForm(event,this)">
+<input type="hidden" name="_subject" value="Richiesta Preventivo - Doctor Computer">
+<input type="hidden" name="_replyto" value="">
+<div class="row2">
+  <div class="field"><label>Nome *</label><input type="text" name="nome" placeholder="Nome *" required></div>
+  <div class="field"><label>Cognome</label><input type="text" name="cognome" placeholder="Cognome"></div>
+</div>
+<div class="row2">
+  <div class="field"><label>E-mail *</label><input type="email" name="email" placeholder="E-mail *" required></div>
+  <div class="field"><label>Telefono *</label><input type="tel" name="telefono" placeholder="Telefono *" required></div>
+</div>
+<div class="field"><label>Budget stimato</label><select name="budget"><option value="" disabled selected>Seleziona...</option><option value="Meno di 100€">Meno di 100€</option><option value="100 - 300€">100 - 300€</option><option value="300 - 500€">300 - 500€</option><option value="500 - 1000€">500 - 1000€</option><option value="Oltre 1000€">Oltre 1000€</option><option value="Non so ancora">Non so ancora</option></select></div>
+<div class="field"><label>Descrivi il problema o il servizio di cui hai bisogno...</label><textarea name="messaggio" placeholder="Descrivi il problema o il servizio di cui hai bisogno..." required></textarea></div>
+<div class="pr-row">
+  <input type="checkbox" required>
+  <span>Acconsento al trattamento dei miei dati personali ai sensi del GDPR 2016/679. <a href="privacy-cookie-policy.html" target="_blank">Leggi la Privacy Policy</a>.</span>
+</div>
+<button type="submit" class="btn-send">Invia richiesta →</button>
+</form>
     </div>
 
     <!-- SIDEBAR -->
