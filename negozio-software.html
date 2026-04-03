@@ -362,7 +362,7 @@ function checkoutWhatsApp() {
   const lines = cart.map(i =>
     '%0A• ' + i.name + (i.variant ? ' - ' + i.variant : '') + ' x' + i.qty + ' = €' + (i.price * i.qty).toFixed(2)
   ).join('');
-  const msg = 'Ciao! Vorrei ordinare:' + lines + '%0A%0A*Totale: €' + total.toFixed(2) + '*%0A%0AConfermate l'ordine?';
+  const msg = 'Ciao! Vorrei ordinare:' + lines + '%0A%0A*Totale: %E2%82%AC' + total.toFixed(2) + '*%0A%0AConfermate+l%27ordine%3F';
   window.open('https://wa.me/393714529669?text=' + msg, '_blank');
 }
 
