@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140">
+  <rect x="0" y="0" width="300" height="140" rx="14" fill="white"/>
+  <path d="M30 20 L70 20 L70 65 Q70 85 50 95 Q30 85 30 65 Z" fill="#C01818"/>
+  <text x="50" y="67" font-family="Arial Black" font-size="30" font-weight="900" fill="white" text-anchor="middle">M</text>
+  <text x="175" y="68" font-family="Arial Black,Arial" font-size="40" font-weight="900" fill="#C01818" text-anchor="middle">McAfee</text>
+  <text x="175" y="100" font-family="Arial" font-size="18" font-weight="bold" fill="#555" text-anchor="middle">Total Protection</text>
+</svg>

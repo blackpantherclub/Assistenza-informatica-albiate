@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 210">
+  <rect x="10" y="10" width="86" height="86" rx="4" fill="#0078D7"/>
+  <rect x="104" y="10" width="86" height="86" rx="4" fill="#0078D7" opacity=".85"/>
+  <rect x="10" y="104" width="86" height="86" rx="4" fill="#0078D7" opacity=".7"/>
+  <rect x="104" y="104" width="86" height="86" rx="4" fill="#0078D7" opacity=".55"/>
+  <text x="100" y="215" font-family="Arial" font-size="22" font-weight="bold" fill="#0078D7" text-anchor="middle">Windows 10</text>
+</svg>

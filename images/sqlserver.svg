@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect x="0" y="0" width="200" height="200" rx="20" fill="#CC2927"/>
+  <!-- Cilindro database -->
+  <ellipse cx="100" cy="55" rx="65" ry="20" fill="#E8524A"/>
+  <rect x="35" y="55" width="130" height="80" fill="#CC2927"/>
+  <ellipse cx="100" cy="135" rx="65" ry="20" fill="#E8524A"/>
+  <ellipse cx="100" cy="95" rx="65" ry="20" fill="#B71C1C" opacity=".5"/>
+  <text x="100" y="178" font-family="Arial" font-size="16" font-weight="bold" fill="white" text-anchor="middle">SQL Server</text>
+</svg>

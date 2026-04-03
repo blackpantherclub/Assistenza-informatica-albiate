@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 210">
+  <rect x="10" y="10" width="80" height="80" rx="4" fill="#0078D7"/>
+  <rect x="98" y="10" width="80" height="80" rx="4" fill="#0078D7" opacity=".75"/>
+  <rect x="10" y="98" width="80" height="80" rx="4" fill="#0078D7" opacity=".5"/>
+  <rect x="98" y="98" width="80" height="80" rx="4" fill="#0078D7" opacity=".35"/>
+  <text x="100" y="208" font-family="Arial" font-size="16" font-weight="bold" fill="#0078D7" text-anchor="middle">Windows Server</text>
+</svg>

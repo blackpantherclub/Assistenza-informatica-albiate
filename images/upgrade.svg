@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect x="0" y="0" width="200" height="200" rx="20" fill="#0078D7"/>
+  <!-- Freccia su -->
+  <polygon points="100,30 145,90 115,90 115,160 85,160 85,90 55,90" fill="white"/>
+  <text x="100" y="188" font-family="Arial" font-size="15" font-weight="bold" fill="white" text-anchor="middle">Upgrade Windows</text>
+</svg>

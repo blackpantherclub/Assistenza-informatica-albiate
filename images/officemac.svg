@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect x="0" y="0" width="200" height="200" rx="20" fill="#D83B01"/>
+  <text x="100" y="85" font-family="Arial Black,Arial" font-size="100" font-weight="900" fill="white" text-anchor="middle">O</text>
+  <text x="100" y="162" font-family="Arial" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Office Mac</text>
+</svg>
