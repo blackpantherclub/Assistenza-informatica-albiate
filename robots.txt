@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Blocca risorse non indicizzabili
+Disallow: /images/
+Disallow: /*.zip$
+
+# Sitemap
+Sitemap: https://www.assistenza-consulenza-informatica.eu/sitemap.xml
+
+# Crawl delay consigliato
+Crawl-delay: 1
