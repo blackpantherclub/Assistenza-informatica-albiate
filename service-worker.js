@@ -4,7 +4,7 @@
 //             Network-first per pagine HTML
 // ════════════════════════════════════════════════════
 
-const CACHE_NAME = 'doctor-computer-v1';
+const CACHE_NAME = 'doctor-computer-v2';
 const OFFLINE_PAGE = '/offline.html';
 
 const STATIC_ASSETS = [

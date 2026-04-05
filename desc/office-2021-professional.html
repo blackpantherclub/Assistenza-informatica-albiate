@@ -156,6 +156,34 @@ a.dmca:hover{opacity:.8;}
   <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
 </head>
 <body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var ham = document.getElementById('hamburger');
+  var mob = document.getElementById('mobileMenu');
+  if (!ham || !mob) return;
+  ham.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var isOpen = mob.classList.contains('open');
+    if (isOpen) {
+      mob.classList.remove('open');
+      ham.classList.remove('open');
+      document.body.style.overflow = '';
+    } else {
+      mob.classList.add('open');
+      ham.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+  mob.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      mob.classList.remove('open');
+      ham.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+});
+</script>
 
       <div style="font-size:.75rem;color:rgba(255,255,255,.65);">Installa l'app sul tuo dispositivo — gratis</div>
     </div>
@@ -258,32 +286,6 @@ function closePWABanner() {
 }
 </script>
 
-<script>
-(function(){
-  var ham = document.getElementById('hamburger');
-  var mob = document.getElementById('mobileMenu');
-  if (!ham || !mob) return;
-  ham.addEventListener('click', function(e) {
-    e.stopPropagation();
-    ham.classList.toggle('open');
-    mob.classList.toggle('open');
-    document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
-  });
-  mob.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      ham.classList.remove('open');
-      mob.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-  });
-  document.addEventListener('click', function(e) {
-    if (mob.classList.contains('open') && !mob.contains(e.target) && !ham.contains(e.target)) {
-      ham.classList.remove('open');
-      mob.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
-})();
-</script>
+
 </body>
 </html>
