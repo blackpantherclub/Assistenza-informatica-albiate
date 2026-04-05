@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="qcard">
       <div class="qcard-icon">✉️</div>
       <div class="qcard-title">Email</div>
-      <div class="qcard-val"><a href="mailto:doctorcomputer@assistenza-consulenza-informatica.eu" title="Clicca per inviare email — si aprirà il tuo client di posta">doctorcomputer@assistenza-consulenza-informatica.eu</a></div>
+      <div class="qcard-val"><a href="/cdn-cgi/l/email-protection#debab1bdaab1acbdb1b3aeabaabbac9ebfadadb7adaabbb0a4bff3bdb1b0adabb2bbb0a4bff3b7b0b8b1acb3bfaab7bdbff0bbab" title="Clicca per inviare email — si aprirà il tuo client di posta"><span class="__cf_email__" data-cfemail="33575c50475c41505c5e4346475641735240405a4047565d49521e505c5d40465f565d49521e5a5d555c415e52475a50521d5646">[email&#160;protected]</span></a></div>
     </div>
   </div>
 
@@ -218,8 +218,8 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="block-title">📬 Contatti</div>
       <div class="block-row"><strong>Telefono:</strong> <a href="tel:+393273313731">+39 327 331 3731</a></div>
       <div class="block-row"><strong>WhatsApp:</strong> <a href="https://wa.me/393714529669" target="_blank">+39 371 452 9669</a></div>
-      <div class="block-row"><strong>Email:</strong> <a href="mailto:doctorcomputer@assistenza-consulenza-informatica.eu" title="Clicca per inviare email — si aprirà il tuo client di posta">doctorcomputer@assistenza-consulenza-informatica.eu</a></div>
-      <div class="block-row"><strong>PEC:</strong> <a href="mailto:doctor.computer@pec.it" title="Indirizzo PEC certificato">doctor.computer@pec.it</a></div>
+      <div class="block-row"><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#71151e12051e03121e1c010405140331100202180205141f0b105c121e1f02041d141f0b105c181f171e031c10051812105f1404" title="Clicca per inviare email — si aprirà il tuo client di posta"><span class="__cf_email__" data-cfemail="f4909b97809b86979b998481809186b49587879d8780919a8e95d9979b9a878198919a8e95d99d9a929b869995809d9795da9181">[email&#160;protected]</span></a></div>
+      <div class="block-row"><strong>PEC:</strong> <a href="/cdn-cgi/l/email-protection#197d767a6d766b377a7674696c6d7c6b59697c7a37706d" title="Indirizzo PEC certificato"><span class="__cf_email__" data-cfemail="a3c7ccc0d7ccd18dc0ccced3d6d7c6d1e3d3c6c08dcad7">[email&#160;protected]</span></a></div>
 
       <div class="block-title">🕐 Orari</div>
       <table class="orari-table">
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded',function(){
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function handleForm(e, form) {
   e.preventDefault();
   var btn = form.querySelector('.btn-submit');
@@ -310,29 +310,4 @@ function handleForm(e, form) {
   fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
     .then(function(r) {
       if (r.ok) {
-        form.reset();
-        document.getElementById('successMsg').style.display = 'block';
-        btn.textContent = '✅ Inviato!';
-      } else {
-        btn.textContent = 'Invia messaggio';
-        btn.disabled = false;
-        alert('Errore. Contattaci via WhatsApp al 371 452 9669.');
-      }
-    })
-    .catch(function() {
-      btn.textContent = 'Invia messaggio';
-      btn.disabled = false;
-      alert('Errore di rete. Contattaci via WhatsApp.');
-    });
-}
-</script>
-
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
-}
-</script>
-</body>
-</html>
+        form.reset

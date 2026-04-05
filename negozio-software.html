@@ -553,20 +553,7 @@ function filterSection(cat, btn) {
 }
 </script>
 
-<script>
-const ham = document.getElementById('hamburger');
-const mob = document.getElementById('mobileMenu');
-const ov  = document.getElementById('mobOverlay');
-function toggleMenu(open){
-  ham.classList.toggle('open', open);
-  mob.classList.toggle('open', open);
-  ov.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-}
-ham.addEventListener('click', () => toggleMenu(!mob.classList.contains('open')));
-ov.addEventListener('click',  () => toggleMenu(false));
-document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => toggleMenu(false)));
-</script>
+
 
 <script>
 // ── Registra Service Worker PWA ───────────────────
