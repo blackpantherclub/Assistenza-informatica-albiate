@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEST MENU MOBILE</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:sans-serif;background:#f0f0f0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#2f2e2e;}
+.nav-bar{display:flex;align-items:center;padding:0 20px;min-height:70px;}
+.logo{color:#fff;font-weight:800;font-size:1.1rem;margin-right:auto;}
+.nav-links{display:flex;list-style:none;gap:1rem;}
+.nav-links a{color:#fff;text-decoration:none;font-size:.9rem;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px 8px;background:none;border:none;z-index:10000;}
+.hamburger span{display:block;width:26px;height:3px;background:#fff;border-radius:2px;transition:all .3s;}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#2f2e2e;z-index:9999;flex-direction:column;padding:80px 0 2rem;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{color:#fff;text-decoration:none;font-size:1rem;font-weight:600;text-transform:uppercase;padding:1rem 2rem;border-bottom:1px solid rgba(255,255,255,.1);}
+@media(max-width:900px){.nav-links{display:none !important;}.hamburger{display:flex;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-bar">
+    <span class="logo">Doctor Computer</span>
+    <ul class="nav-links">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">CONTATTI</a></li>
+      <li><a href="#">SERVIZI</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">HOME</a>
+  <a href="#">CONTATTI</a>
+  <a href="#">SERVIZI</a>
+</div>
+<div style="padding:120px 20px;">
+  <h1>Pagina di test</h1>
+  <p>Il menu mobile funziona su questa pagina?</p>
+</div>
+<script>
+(function(){
+  var ham = document.getElementById('hamburger');
+  var mob = document.getElementById('mobileMenu');
+  if (!ham || !mob) return;
+  ham.addEventListener('click', function(e) {
+    e.stopPropagation();
+    ham.classList.toggle('open');
+    mob.classList.toggle('open');
+    document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
+  });
+  mob.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      ham.classList.remove('open');
+      mob.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+</body>
+</html>

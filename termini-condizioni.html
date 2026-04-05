@@ -41,12 +41,8 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;color:#222;background:#fff;overflow-x:hidden;}
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:#2f2e2e;}
+<style>/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#2f2e2e;}
 .nav-bar{display:flex;align-items:center;padding:0 20px;min-height:105px;}
 .logo-wrap{flex-shrink:0;margin-right:18px;text-decoration:none;}
 .logo-img{width:92px;height:92px;border-radius:50%;object-fit:contain;background:transparent;animation:spin 12s linear infinite;display:block;}
@@ -55,25 +51,52 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:#2f2e2e;}
 .nav-links li a{font-size:11.5px;font-weight:600;color:#fff;text-decoration:none;padding:8px 11px;letter-spacing:.05em;text-transform:uppercase;display:block;white-space:nowrap;transition:opacity .2s;}
 .nav-links li a:hover{opacity:.65;}
 .nav-links li a.active{color:#e8c0a7;font-weight:800;}
-/* HAMBURGER */
-.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;margin-left:auto;background:none;border:none;z-index:9999;position:relative;}
-.hamburger span{display:block;width:26px;height:2.5px;background:#fff;border-radius:2px;transition:all .3s;}
-.hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:10px 8px;margin-left:auto;background:none;border:none;z-index:10000;position:relative;-webkit-tap-highlight-color:transparent;}
+.hamburger span{display:block;width:26px;height:3px;background:#fff;border-radius:2px;transition:all .3s ease;pointer-events:none;}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
-.hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
-/* MOBILE DRAWER */
-.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#2f2e2e;z-index:9998;overflow-y:auto;flex-direction:column;padding:115px 0 2rem;}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:#2f2e2e;z-index:9999;overflow-y:auto;flex-direction:column;padding:120px 0 2rem;}
 .mobile-menu.open{display:flex;}
-.mobile-menu a{color:#fff;text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:1rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.06);display:block;transition:background .2s,color .2s;}
-.mobile-menu a:hover{background:rgba(255,255,255,.06);color:#e8c0a7;}
+.mobile-menu a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.9rem 1.75rem;border-bottom:1px solid rgba(255,255,255,.06);transition:background .2s,color .2s;}
+.mobile-menu a:hover,.mobile-menu a.active{background:rgba(255,255,255,.07);color:#e8c0a7;}
+.m-cta{margin:1.25rem 1.75rem 0;display:flex;flex-direction:column;gap:.65rem;}
+.m-btn{display:block;text-align:center;padding:.85rem;border-radius:10px;font-weight:700;font-size:.92rem;text-decoration:none;}
+.m-btn.wa{background:#25d366;color:#fff;}
+.m-btn.phone{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18);}
+@media(max-width:900px){.nav-links{display:none !important;}.hamburger{display:flex;}}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:#222;background:#fff;overflow-x:hidden;}
+
+
+
+
+to{transform:rotate(360deg);}}
+
+
+
+
+/* HAMBURGER */
+
+
+
+
+
+/* MOBILE DRAWER */
+
+
+
+
 .mobile-menu a.active{color:#e8c0a7;}
 .mobile-menu .mob-cta{margin:1.5rem;background:#0073b6;border-radius:8px;text-align:center;padding:1rem!important;border-bottom:none!important;}
 .mobile-menu .mob-wa{margin:.5rem 1.5rem 1.5rem;background:#25d366;border-radius:8px;text-align:center;padding:1rem!important;border-bottom:none!important;}
 .mob-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:198;}
 .mob-overlay.open{display:block;}
 @media(max-width:900px){
-  .nav-links{display:none;}
-  .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;margin-left:auto;background:none;border:none;z-index:9999;position:relative;}
+  
+  
 }
 .page{padding:9rem 6% 5rem;max-width:860px;margin:0 auto;}
 .page-hdr{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid #f0f0f0;}
@@ -102,6 +125,20 @@ footer a:hover{text-decoration:underline;}
 
 a.dmca{text-decoration:none;cursor:pointer;}
 a.dmca:hover{opacity:.8;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){}}
 </style>
 
   <!-- ═══ PWA ═══ -->
@@ -118,12 +155,7 @@ a.dmca:hover{opacity:.8;}
   <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
 </head>
 <body>
-<!-- ═══ BANNER INSTALLA APP ═══ -->
-<div id="pwa-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#1a1a2e;color:#fff;padding:.85rem 1.25rem;align-items:center;justify-content:space-between;gap:.75rem;box-shadow:0 -4px 20px rgba(0,0,0,.3);flex-wrap:wrap;">
-  <div style="display:flex;align-items:center;gap:.75rem;">
-    <img src="/icons/icon-72.png" alt="Doctor Computer" style="width:42px;height:42px;border-radius:10px;" onerror="this.style.display='none'">
-    <div>
-      <div style="font-weight:800;font-size:.9rem;">Doctor Computer & Software</div>
+
       <div style="font-size:.75rem;color:rgba(255,255,255,.65);">Installa l'app sul tuo dispositivo — gratis</div>
     </div>
   </div>
@@ -289,12 +321,7 @@ if ('serviceWorker' in navigator) {
 }
 // ── Banner installa app ───────────────────────────
 let deferredPrompt;
-window.addEventListener('beforeinstallprompt', function(e) {
-  e.preventDefault();
-  deferredPrompt = e;
-  var banner = document.getElementById('pwa-banner');
-  if (banner) banner.style.display = 'flex';
-});
+
 function installPWA() {
   if (!deferredPrompt) return;
   deferredPrompt.prompt();
@@ -310,12 +337,15 @@ function closePWABanner() {
 }
 </script>
 
+
+
 <script>
 (function(){
   var ham = document.getElementById('hamburger');
   var mob = document.getElementById('mobileMenu');
   if (!ham || !mob) return;
-  ham.addEventListener('click', function() {
+  ham.addEventListener('click', function(e) {
+    e.stopPropagation();
     ham.classList.toggle('open');
     mob.classList.toggle('open');
     document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
@@ -326,6 +356,13 @@ function closePWABanner() {
       mob.classList.remove('open');
       document.body.style.overflow = '';
     });
+  });
+  document.addEventListener('click', function(e) {
+    if (mob.classList.contains('open') && !mob.contains(e.target) && !ham.contains(e.target)) {
+      ham.classList.remove('open');
+      mob.classList.remove('open');
+      document.body.style.overflow = '';
+    }
   });
 })();
 </script>
