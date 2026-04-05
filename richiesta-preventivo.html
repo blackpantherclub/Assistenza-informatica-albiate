@@ -41,7 +41,7 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>/* NAV */
+<style>/* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#2f2e2e;}
 .nav-bar{display:flex;align-items:center;padding:0 20px;min-height:105px;}
 .logo-wrap{flex-shrink:0;margin-right:18px;text-decoration:none;}
@@ -65,34 +65,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#2f2e2e;}
 .m-btn.wa{background:#25d366;color:#fff;}
 .m-btn.phone{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18);}
 @media(max-width:900px){.nav-links{display:none !important;}.hamburger{display:flex;}}
+/* ── FINE NAV ── */
+/* NAV */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){}
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;color:#222;background:#fff;overflow-x:hidden;}
 
-
-
-
-to{transform:rotate(360deg);}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .m-btn:hover{opacity:.88;}
-
-
-
 
 /* PAGE */
 .page{padding:10rem 6% 5rem;max-width:1100px;margin:0 auto;}
@@ -159,18 +162,6 @@ footer a{color:#0073b6;text-decoration:none;margin:0 .4rem;}
 a.dmca{text-decoration:none;cursor:pointer;}
 a.dmca:hover{opacity:.8;}
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width:900px){}}
 </style>
 
@@ -189,33 +180,27 @@ a.dmca:hover{opacity:.8;}
 </head>
 <body>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var ham = document.getElementById('hamburger');
-  var mob = document.getElementById('mobileMenu');
-  if (!ham || !mob) return;
-  ham.addEventListener('click', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var isOpen = mob.classList.contains('open');
-    if (isOpen) {
-      mob.classList.remove('open');
-      ham.classList.remove('open');
-      document.body.style.overflow = '';
-    } else {
-      mob.classList.add('open');
-      ham.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
+document.addEventListener('DOMContentLoaded',function(){
+  var ham=document.getElementById('hamburger');
+  var mob=document.getElementById('mobileMenu');
+  if(!ham||!mob)return;
+  ham.addEventListener('click',function(e){
+    e.preventDefault();e.stopPropagation();
+    var open=mob.classList.contains('open');
+    ham.classList.toggle('open',!open);
+    mob.classList.toggle('open',!open);
+    document.body.style.overflow=open?'':'hidden';
   });
-  mob.querySelectorAll('a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      mob.classList.remove('open');
+  mob.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
       ham.classList.remove('open');
-      document.body.style.overflow = '';
+      mob.classList.remove('open');
+      document.body.style.overflow='';
     });
   });
 });
 </script>
+
 
       <div style="font-size:.75rem;color:rgba(255,255,255,.65);">Installa l'app sul tuo dispositivo — gratis</div>
     </div>
